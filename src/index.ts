@@ -1,4 +1,5 @@
 import { AitumCCLib } from 'aitum-cc-lib';
+import { InputType } from 'aitum-cc-lib/src/enums/InputType';
 import * as dotenv from 'dotenv';
 import { resolve } from 'path';
 import DummyAction from './actions/DummyAction';
@@ -11,7 +12,12 @@ const lib = AitumCCLib.get();
   lib.setEnv(process.env.AITUM_CC_ID as string, process.env.AITUM_CC_HOST as string, process.env.API_KEY as string);
 
   // Register actions
-  lib.registerAction('Dummy Action', {}, DummyAction);
+  lib.registerAction('Dummy Action', {
+    testInput: {
+      type: InputType.STRING,
+      required: true
+    }
+  }, DummyAction);
 
 
   // Connect after a few seconds

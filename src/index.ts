@@ -13,9 +13,25 @@ const lib = AitumCCLib.get();
 
   // Register actions
   lib.registerAction('Dummy Action', {
-    testInput: {
+    testStringInput: {
       type: InputType.STRING,
+      label: 'What is your name?',
       required: true
+    },
+    testBooleanInput: {
+      type: InputType.BOOLEAN,
+      label: 'Are you a fun person?',
+      required: false
+    },
+    testIntInput: {
+      type: InputType.INT,
+      label: 'How old are you?',
+      required: true
+    },
+    testFloatInput: {
+      type: InputType.FLOAT,
+      label: 'Volume level',
+      required: false
     }
   }, DummyAction);
 

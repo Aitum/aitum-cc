@@ -140,16 +140,28 @@ new FloatInput('Volume', validation)
 }
 ```
 
-
-
-
-
 ### Method
 This is where the fun stuff happens. Write your code in here!
 
 Passed down to this method is a variable called `inputs` which includes the data sent to the action from within the Aitum App.
 
 For interaction with Aitum's API, you can utilise [Aitum.JS](https://www.npmjs.com/package/aitum.js) (already installed).
+
+### Registering an action
+
+To register your new action, go to `index.ts`.
+Within this file you will need to import your new action's file, you can do this by adding another line to the imports section. e.g.
+```ts
+import MyNewAction from './actions/MyNewAction';
+```
+where `MyNewAction` is the filename of your new action.
+
+Once you've imported the file, you can register it by adding another line in the Register Actions section, e.g.
+```ts
+lib.registerAction(MyNewAction);
+```
+
+and you're good to go!
 
 ### Warranty
 Aitum takes no responsibility for any damage caused by using Aitum, Aitum CC or any other libraries.

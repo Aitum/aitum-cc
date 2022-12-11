@@ -3,9 +3,33 @@
  * If it's ran more than once, you may overwrite settings and have to set things up from scratch.
  */
 
-console.log('Aitum Custom Code Wrapper: Setup');
-// TODO: Check if a settings.env file exists on __dirname/settings.env
+import { existsSync, writeFileSync } from 'fs';
+import { resolve } from 'path';
+import { v4 as uuidv4 } from 'uuid';
+import { hostname } from 'os';
 
-// TODO: Generate settings.env with a blank space for API key
+console.log('AitumCC Wrapper: Setup');
 
-// TODO: Instruct the user to edit settings.env to add their API key
+const targetPath = resolve(__dirname, '..', 'settings.env');
+
+// Already exists check
+const alreadyExists = existsSync(targetPath);
+
+if (alreadyExists) {
+  console.log('===================== ERROR =====================');
+  console.log('You already have an existing settings.env file.');
+  console.log('Exiting...');
+  process.exit(0);
+}
+
+// Generate a new settings file
+const blankConfig = `AITUM_CC_ID=${uuidv4()}
+AITUM_CC_HOST=Custom Code Wrapper: ${hostname()} 
+API_KEY=`;
+
+writeFileSync(targetPath, blankConfig);
+
+console.log('===================== INFO =====================');
+console.log('A settings file has been generated at the root of this project called settings.env.');
+console.log('You still need to enter your API Key, which can be found within Aitum\'s Settings in app.');
+process.exit(0);

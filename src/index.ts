@@ -19,5 +19,3 @@ const lib = AitumCCLib.get();
   // Connect after a few seconds
   setTimeout(async () => await lib.connect(), 1e3);
 })();
-
-

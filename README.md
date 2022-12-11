@@ -150,3 +150,7 @@ This is where the fun stuff happens. Write your code in here!
 Passed down to this method is a variable called `inputs` which includes the data sent to the action from within the Aitum App.
 
 For interaction with Aitum's API, you can utilise [Aitum.JS](https://www.npmjs.com/package/aitum.js) (already installed).
+
+### Warranty
+Aitum takes no responsibility for any damage caused by using Aitum, Aitum CC or any other libraries.
+All custom code used is with the understanding that the user knows what they are running and takes full responsibility any code ran and its outcomes.

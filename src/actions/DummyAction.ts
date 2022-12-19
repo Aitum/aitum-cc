@@ -1,6 +1,6 @@
 import { ICCActionInputs, ICustomCode } from 'aitum.js/lib/interfaces';
 import { BooleanInput, FloatInput, IntInput, StringInput } from 'aitum.js/lib/inputs';
-import { AitumJS } from 'aitum.js';
+import { AitumCC } from 'aitum.js';
 import { DeviceType } from 'aitum.js/lib/enums';
 
 /*********** CONFIG ***********/
@@ -17,7 +17,7 @@ const inputs: ICCActionInputs = {
 
 // The code executed.
 async function method(inputs: { [key: string]: number | string | boolean | string[] }) {
-  const lib = AitumJS.get();
+  const lib = AitumCC.get().getAitumJS();
 
   const aitumDevice = (await lib.getDevices(DeviceType.AITUM))[0];
 

@@ -1,6 +1,7 @@
-import { BooleanInput, FloatInput, ICCActionInputs, ICustomCode, IntInput, StringInput } from 'aitum-cc-lib';
+import { ICCActionInputs, ICustomCode } from 'aitum.js/lib/interfaces';
+import { BooleanInput, FloatInput, IntInput, StringInput } from 'aitum.js/lib/inputs';
 import { AitumJS } from 'aitum.js';
-import { DeviceType } from 'aitum.js/lib/enums'
+import { DeviceType } from 'aitum.js/lib/enums';
 
 /*********** CONFIG ***********/
 // The custom code action name

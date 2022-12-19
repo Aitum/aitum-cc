@@ -1,4 +1,4 @@
-import { AitumCCLib } from 'aitum-cc-lib';
+import { AitumCC } from 'aitum.js';
 import * as dotenv from 'dotenv';
 import { resolve } from 'path';
 
@@ -6,7 +6,7 @@ import DummyAction from './actions/DummyAction';
 
 dotenv.config({ path: resolve(__dirname, '..', 'settings.env') });
 
-const lib = AitumCCLib.get();
+const lib = AitumCC.get();
 
 (async () => {
   // Set up the environment

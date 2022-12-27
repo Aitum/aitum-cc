@@ -149,19 +149,7 @@ For interaction with Aitum's API, you can utilise [Aitum.JS](https://www.npmjs.c
 
 ### Registering an action
 
-To register your new action, go to `index.ts`.
-Within this file you will need to import your new action's file, you can do this by adding another line to the imports section. e.g.
-```ts
-import MyNewAction from './actions/MyNewAction';
-```
-where `MyNewAction` is the filename of your new action.
-
-Once you've imported the file, you can register it by adding another line in the Register Actions section, e.g.
-```ts
-lib.registerAction(MyNewAction);
-```
-
-and you're good to go!
+Registering actions is automatic, so long as you have a `.ts` (TypeScript) file within the `/actions/` directory that adheres to the specs above.
 
 ### Warranty
 Aitum takes no responsibility for any damage caused by using Aitum, Aitum CC or any other libraries.

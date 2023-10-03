@@ -20,14 +20,16 @@
   },
   "homepage": "https://github.com/Aitum/aitum-cc#readme",
   "dependencies": {
-    "aitum.js": "^2.0.0-beta.2",
+    "aitum.js": "^2.0.2",
     "dotenv": "^16.0.3",
+    "spotify-web-api-node": "^5.0.2",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.9.3",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.10",
+    "@types/spotify-web-api-node": "^5.0.8",
     "@types/uuid": "^9.0.0"
   }
 }
